@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RaceRoom Scoreboard Template</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main class="raceroom-container">
+        <!-- Header Info: Mode, Lap, Time -->
+        <header class="race-header">
+            <div class="race-badge" id="race-mode">RACE</div>
+            <div class="race-meta">
+                <div class="meta-item">
+                    <span class="meta-label">LAP</span>
+                    <span class="meta-val" id="lap-display">- / -</span>
+                </div>
+                <div class="meta-item">
+                    <span class="meta-label">TIME</span>
+                    <span class="meta-val" id="time-display">00:00</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Scoreboard Table / Leaderboard -->
+        <section class="scoreboard-section">
+            <table class="scoreboard-table">
+                <thead>
+                    <tr>
+                        <th class="col-pos">POS</th>
+                        <th class="col-driver">DRIVER</th>
+                        <th class="col-lap" id="th-lap">CP</th>
+                        <th class="col-time" id="th-time">GAP</th>
+                    </tr>
+                </thead>
+                <tbody id="scoreboard-body">
+                    <tr class="placeholder-row">
+                        <td colspan="4">Menunggu data balapan...</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Dynamic Track Silhouette Minimap (4:3 Aspect Ratio) -->
+        <section class="track-minimap-section" id="track-section">
+            <canvas id="track-canvas" width="400" height="300"></canvas>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

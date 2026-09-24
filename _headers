@@ -1,0 +1,13 @@
+# Cloudflare Pages headers configuration
+# Learn more: https://developers.cloudflare.com/pages/platform/headers/
+
+# Security headers
+/*
+  Access-Control-Allow-Origin: *
+  Access-Control-Allow-Methods: GET, POST, OPTIONS
+  Access-Control-Allow-Headers: *
+  X-Frame-Options: allow-from *
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: geolocation=(), microphone=(), camera=()
+  Content-Security-Policy: default-src 'self' ws: wss: *; script-src * 'unsafe-eval' 'unsafe-inline'; style-src * 'unsafe-inline'; img-src * data: https:; font-src *; connect-src * 'self' ws: wss: http: https:;
